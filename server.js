@@ -5,24 +5,23 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articles {
-    article-one: {
-        title: 'First Article | Shubham Sharma',
-        heading: 'Introduction',
-        date: 'Feb 03 2017',
-        content: `<p>
-                       My name is Shubham Sharma. I am from jaipur. I have completed my engineering in 2017. I have a keen interest
-                       in technological aspects of web developing. I first learned about html in class 10th. This was the most interesting
-                       topics i have seen in development environment
-                    </p>
-                    <p>
-                       My name is Shubham Sharma. I am from jaipur. I have completed my engineering in 2017. I have a keen interest
-                       in technological aspects of web developing. I first learned about html in class 10th. This was the most interesting
-                       topics i have seen in development environment
-                    </p>`
-        
-    };
-    article-two: {
+var articles = {
+    'article-one':{
+        title: 'First article | Shubham Sharma',
+        heading: 'Article one',
+        date: 'Feb 02 2017',
+        content:`<p>
+                   My name is Shubham Sharma. I am from jaipur. I have completed my engineering in 2017. I have a keen interest
+                   in technological aspects of web developing. I first learned about html in class 10th. This was the most interesting
+                   topics i have seen in development environment
+                </p>
+                <p>
+                   My name is Shubham Sharma. I am from jaipur. I have completed my engineering in 2017. I have a keen interest
+                   in technological aspects of web developing. I first learned about html in class 10th. This was the most interesting
+                   topics i have seen in development environment
+                </p>`
+    },
+    'article-two': {
         title: 'Second Article | Shubham Sharma',
         heading: 'Article two',
         date: 'Feb 05 2017',
@@ -30,14 +29,14 @@ var articles {
                    My name is Shubham Sharma. I am from jaipur. This is my short and sweet aricle
                   </p>`
     },
-    article-three: {
+    'article-three': {
         title: 'Third Article | Shubham Sharma',
         heading: 'Article third',
         date: 'Feb 03 2017',
         content: `<p>
                    I am pleased to write these wonderful articles. This is my third one.
                   </p>`
-    }
+    }  
 };
     
 
@@ -77,7 +76,7 @@ var htmlTemplate =
         </html>`
         ;
         return htmlTemplate;
-    
+    }
 
 app.get('/:articleName', function (req, res) {
    var articleName = req.params.articleName;
