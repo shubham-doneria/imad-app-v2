@@ -79,6 +79,8 @@ var htmlTemplate =
     }
 
 app.get('/:articleName', function (req, res) {
+    //articleName == article-one,two,three
+    //articles[articleName] == {} content object for article-one,two,three
    var articleName = req.params.articleName;
     res.send(createTemplate(articles[articleName]));
 });
