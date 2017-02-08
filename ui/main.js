@@ -4,7 +4,7 @@ var img = document.getElementById("hasura");
 var marginLeft = 0;
 
 function moveRight() {
-    marginLeft = marginLeft + 10;
+    marginLeft = marginLeft + 2;
     img.style.marginLeft = marginLeft + 'px';
 }
 img.onclick = function() {
