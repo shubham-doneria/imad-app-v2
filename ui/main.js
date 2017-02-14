@@ -1,6 +1,6 @@
 console.log('Loaded!');
 // move the image
-var img = document.getElementById("hasura");
+var img = document.getElementById("profile");
 var marginLeft = 0;
 
 function moveRight() {
