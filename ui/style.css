@@ -20,6 +20,7 @@ body {
     height: 200px;
 }
  .container {
+     max-width: 1200px;
     color: #403838;
     font-family: sans-serif;
     padding-top: 30px;
