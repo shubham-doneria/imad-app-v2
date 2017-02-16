@@ -35,7 +35,7 @@ button.onclick = function() {
         }
     };
     // Make a request
-    request.open('GET', 'http://shubham-doneria.imad.hasura-app.io/', true);
+    request.open('GET', 'http://shubham-doneria.imad.hasura-app.io/c/counter', true);
     request.send(null);
 };
     
