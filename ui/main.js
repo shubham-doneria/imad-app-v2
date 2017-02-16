@@ -13,7 +13,6 @@ img.onclick = function() {
 };
 
 // counter code
-var counter = 0;
 var button = document.getElementById("counter");
 
 button.onclick = function() {
