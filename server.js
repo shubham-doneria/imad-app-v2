@@ -5,6 +5,12 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var counter = 0;
+app.get('/c/counter', function (req, res) {
+    counter = counter + 1;
+  res.send(counter.toString());
+});
+
 var articles = {
     'article-one':{
         title: 'First article | Shubham Sharma',
@@ -78,11 +84,7 @@ var htmlTemplate =
         return htmlTemplate;
     }
     
-var counter = 0;
-app.get('/c/counter', function (req, res) {
-    counter = counter + 1;
-  res.send(counter.toString());
-});
+
 
 app.get('/:articleName', function (req, res) {
     //articleName == article-one,two,three
