@@ -1,4 +1,16 @@
+console.log('Loaded!');
 
+// move the image
+var img = document.getElementById("profile");
+var marginLeft = 0;
+
+function moveRight() {
+    marginLeft = marginLeft + 0.5;
+    img.style.marginLeft = marginLeft + 'px';
+}
+img.onclick = function() {
+    var interval = setInterval(moveRight, 30);
+};
 
 // counter code
 var button = document.getElementById("counter");
@@ -11,7 +23,7 @@ button.onclick = function() {
     
     //capture a response and store it in a variable
     request.onreadystatechange = function() {
-        if(request.readystate === XMLHttpRequest.DONE) {
+        if(request.readyState === XMLHttpRequest.DONE) {
             //Take some action
             if(request.status === 200){
                 var counter = request.responseText;
