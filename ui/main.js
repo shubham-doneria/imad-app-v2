@@ -66,7 +66,7 @@ submit.onclick = function() {
     };
     // Make a request
     var name = nameInput.value;
-    request.open('GET', 'http://shubham-doneria.imad.hasura-app.io/submit-name', name, true);
+    request.open('GET', 'http://shubham-doneria.imad.hasura-app.io/submit-name?=name=' + name, true);
     request.send(null);
     //capture a list of names and render it as a list
    
